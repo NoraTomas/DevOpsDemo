@@ -13,6 +13,7 @@ phases:
     - cd target/
     - ls -la
     - echo checking script files
+    - cd ..
     - cd scripts/
 artifacts:
   files:
