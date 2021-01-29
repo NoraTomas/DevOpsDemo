@@ -8,6 +8,10 @@ phases:
     commands:
     - echo building the backend
     - mvn install
+
+    - echo checking for artifacts
+    - cd target/
+    - ls -la
 artifacts:
   files:
   - target/*.jar
