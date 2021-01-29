@@ -12,6 +12,8 @@ phases:
     - echo checking for artifacts
     - cd target/
     - ls -la
+    - echo checking script files
+    - cd scripts/
 artifacts:
   files:
   - target/*.jar
