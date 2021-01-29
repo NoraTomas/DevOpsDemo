@@ -66,6 +66,16 @@ Use this command to make sure your CodeDeploy agent is runnign:
 sudo service codedeploy-agent status
 ```
 
+## Step 5: Learn what files AWS needs to deploy
+AWS needs some files that exist in this project to know how to
+deploy your code. 
+The *appspec.yml* file is used by the deployment part of the
+pipeline called **CodeDeploy**. *buildspec.yml* is used by
+the build part of the pipeline called **CodeBuild**. 
+
+We will also move some scripts that will run the JAR-file from our computer
+to the EC2 instance. The scripts can be found in the 
+/scripts directory. 
 
 
 
