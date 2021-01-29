@@ -3,25 +3,21 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto11
+      java: corretto8
   build:
     commands:
-    - echo building the backend
-    - mvn install
-
-    - echo checking for artifacts
-    - cd target/
-    - ls -la
-    - echo checking script files
-    - cd ..
-    - cd scripts/
+      - echo installing maven...
+      - apt-get update -y
+      - apt-get install -y maven
+      - echo installing maven
+      - mvn install
 artifacts:
   files:
-  - target/*.jar
-  - scripts/*.sh
-  - appspec.yml
+    - target/*.jar
+    - scripts/*.sh
+    - appspec.yml
   discard-paths: yes
 
 cache:
   paths:
-  - '/root/.m2/**/*'
+    - '/root/.m2/**/*'
