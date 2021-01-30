@@ -8,6 +8,6 @@ public class WeatherController {
 
 	@GetMapping("/")
 	public String greeting() {
-		return ("The temperature in Oslo is -10 degrees");
+		return ("The temperature in Oslo is -12 degrees");
 	}
 }
