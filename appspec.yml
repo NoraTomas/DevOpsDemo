@@ -1,10 +1,11 @@
 version: 0.0
 os: linux
 files:
-  overwrite: true
 - source: /
   destination: /home/ec2-user
 hooks:
+  BeforeInstall:
+    - location: cleanup.sh
   AfterInstall:
   - location: fix_previleges.sh
     timeout: 300
