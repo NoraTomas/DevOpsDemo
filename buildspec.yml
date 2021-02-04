@@ -6,9 +6,7 @@ phases:
       java: openjdk11
   build:
     commands:
-      - echo installing maven...
-      - apt-get install -y maven
-      - echo installing maven
+      - mvn version
       - mvn install
 artifacts:
   files:
