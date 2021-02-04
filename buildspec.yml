@@ -6,7 +6,6 @@ phases:
       java: openjdk11
   build:
     commands:
-      - mvn version
       - mvn install
 artifacts:
   files:
