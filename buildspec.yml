@@ -3,11 +3,12 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto11
+      java: openjdk11
   build:
     commands:
       - echo installing maven...
       - apt-get install -y maven
+      - echo installing maven
       - mvn install
 artifacts:
   files:
